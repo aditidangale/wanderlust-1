@@ -3,6 +3,9 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+ARG VITE_API_PATH
+ENV VITE_API_PATH=$VITE_API_PATH
+
 COPY package*.json ./
 RUN npm ci
 
