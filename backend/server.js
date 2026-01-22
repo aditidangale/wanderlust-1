@@ -16,9 +16,9 @@ app.use(cors());
 app.use(cookieParser());
 app.use(compression());
 
-const client = require('prom-client');
-const collectDefaultMetrics = client.collectDefaultMetrics;
-
+//const client = require('prom-client');
+//const collectDefaultMetrics = client.collectDefaultMetrics;
+import client, { collectDefaultMetrics } from 'prom-client';
 collectDefaultMetrics();
 
 app.get('/metrics', async (req, res) => {
