@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wanderlust-config
+  namespace: wanderlust
+data:
+  NODE_ENV: production
+
+  # App
+  PORT: "80"
+  BACKEND_URL: http://backend-service:5000
+
+  # Database
+  MONGODB_URI: mongodb://mongo-service:27017/wanderlust
+
+  # Redis
+  REDIS_URL: redis://redis-service:6379
+

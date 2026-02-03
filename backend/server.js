@@ -44,6 +44,13 @@ app.get('/', (req, res) => {
   res.send('Yay!! Backend of wanderlust app is now accessible');
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    uptime: process.uptime(),
+  });
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on port ${port}`);
 });
