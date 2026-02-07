@@ -21,7 +21,7 @@ RUN npm run build
 
 
 # ---------- RUNTIME STAGE ----------
-FROM nginx:alpine
+FROM nginx:1.26-bookworm
 
 # Remove default nginx config
 RUN rm /etc/nginx/conf.d/default.conf
