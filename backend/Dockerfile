@@ -1,6 +1,9 @@
-FROM node:18-alpine3.21
+FROM node:18-bookworm-slim
 
-RUN apk update && apk upgrade --no-cache
+RUN apt-get update \
+ && apt-get upgrade -y \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
