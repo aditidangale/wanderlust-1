@@ -1,5 +1,6 @@
 # ---------- BUILD STAGE ----------
-FROM node:18-alpine AS builder
+FROM node:18-alpine3.21 AS builder
+RUN apk update && apk upgrade --no-cache
 
 WORKDIR /app
 
