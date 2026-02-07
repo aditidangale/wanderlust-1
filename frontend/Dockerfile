@@ -1,6 +1,10 @@
 # ---------- BUILD STAGE ----------
-FROM node:18-alpine3.21 AS builder
-RUN apk update && apk upgrade --no-cache
+FROM node:18-bookworm-slim AS builder
+
+RUN apt-get update \
+ && apt-get upgrade -y \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
