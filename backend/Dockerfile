@@ -1,13 +1,13 @@
-FROM node:18-alpine
+FROM node:18-alpine3.21
+
+RUN apk update && apk upgrade --no-cache
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install --only=production
+RUN npm install --production
 
 COPY . .
 
-EXPOSE 5000
-
-CMD ["node", "server.js"]
-
+EXPOSE 3000
+CMD ["npm", "start"]
