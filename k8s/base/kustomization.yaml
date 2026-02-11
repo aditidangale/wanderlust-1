@@ -4,10 +4,10 @@ kind: Kustomization
 namespace: wanderlust
 
 resources:
-  - namespaces/
-  - configmaps/
-  - secrets/
-  - deployments/
-  - services/
-  - ingress/
+  - namespaces
+  - configmaps
+  - secrets
+  - deployments
+  - services
+  - ingress
 

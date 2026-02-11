@@ -1,0 +1,5 @@
+resources:
+  - backend-service.yaml
+  - frontend-service.yaml
+  - mongo-service.yaml
+  - redis-service.yaml

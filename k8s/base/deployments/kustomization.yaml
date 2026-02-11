@@ -1,0 +1,6 @@
+
+resources:
+  - backend-deployment.yaml
+  - frontend-deployment.yaml
+  - mongo-deployment.yaml
+  - redis-deployment.yaml
