@@ -1,0 +1,14 @@
+resources:
+  - namespaces/
+  - configmaps/
+  - secrets/
+  - deployments/
+  - services/
+  - ingress/
+
+images:
+  - name: aditidangale/wanderlust-backend
+    newTag: latest
+  - name: aditidangale/wanderlust-frontend
+    newTag: latest
+
